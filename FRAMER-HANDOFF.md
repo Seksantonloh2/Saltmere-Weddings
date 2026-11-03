@@ -36,14 +36,15 @@ The package buttons link to `/enquire?package=…`, which preselects the package
 - Body: 18px desktop, 17px mobile, line-height 1.6.
 
 ## Motion (every animation is 0.8s, ease `cubic-bezier(0.22, 1, 0.36, 1)`)
-- **Text on load:** Appear effect with blur 10 → 0, opacity 0 → 1, y 16 → 0, staggered about 70ms per word.
-- **Scroll reveals:** blur 8, y 24, staggered about 90ms within grids.
+- **Text on load:** slide-in Appear effect, opacity 0 → 1 and y 24 → 0, staggered about 70ms per word. No blur.
+- **Scroll reveals:** slide-in, opacity 0 → 1 and y 32 → 0, staggered about 90ms within grids. No blur.
 - **Gallery images:** slow slide-in (y 40 → 0 with a slight scale-down, 1.4s).
-- **Buttons:** Hover variant lightens the brown, the label slides up and is replaced by a duplicate, and the arrow shifts 5px. Press scales to 0.97. No shadows anywhere.
+- **Buttons:** Hover variant lightens the brown, and the label slides up and is replaced by a duplicate. No arrow icon. Press scales to 0.97. No shadows anywhere.
 - **Cards:** image zooms to 1.04–1.05, background shifts slightly darker, and service tiles lift 4px.
 - **Stats:** count up from 0 over 1.6s with ease-out and run once. Suffixes (+, ★) stay static.
-- **Page transitions:** blur and fade between pages. Same-page anchors only smooth-scroll.
-- **Reduced motion:** blur and translate are off, and simple fades remain.
+- **Page transitions:** the outgoing page slides up and fades out, and the incoming page slides up into place. Same-page anchors only smooth-scroll.
+- **Story popup and form confirmation:** slide up 32px and fade in.
+- **Reduced motion:** sliding is off, and simple fades remain.
 
 ## Navigation
 - Desktop: links on the left, centred wordmark, Brown "Check your date" button on the right. Sticky, with a hairline border once you scroll.

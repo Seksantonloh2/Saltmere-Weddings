@@ -320,7 +320,7 @@ em.serif { font-family: var(--serif); font-style: italic; }
 .story { width: min(1100px, 100vw - 32px); max-height: calc(100vh - 32px); padding: 0; border: 0; border-radius: var(--r); background: var(--bg); color: var(--ink); overflow: auto; }
 .story::backdrop { background: rgba(20, 20, 20, 0.6); }
 .story[open] { animation: storyIn var(--dur) var(--ease); }
-@keyframes storyIn { from { opacity: 0; transform: translateY(24px); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes storyIn { from { opacity: 0; transform: translateY(32px); } to { opacity: 1; transform: none; } }
 .story__close { position: sticky; top: 16px; float: right; margin: 16px 16px 0 0; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: var(--bg); cursor: pointer; z-index: 2; display: grid; place-items: center; transition: background-color var(--dur) var(--ease); }
 .story__close:hover { background: var(--surface); }
 .story__close svg { width: 16px; height: 16px; }
@@ -435,26 +435,26 @@ select.input { appearance: none; background-image: url("data:image/svg+xml,%3Csv
 .footer-base { display: flex; justify-content: space-between; gap: var(--s4); flex-wrap: wrap; margin-top: var(--s8); padding-top: var(--s4); border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
 
 /* ---------- Motion ---------- */
-.js [data-blur] .w { display: inline-block; opacity: 0; filter: blur(10px); transform: translateY(16px); transition: opacity var(--dur) var(--ease), filter var(--dur) var(--ease), transform var(--dur) var(--ease); }
-.js [data-blur].is-in .w { opacity: 1; filter: blur(0); transform: none; }
+.js [data-words] .w { display: inline-block; opacity: 0; transform: translateY(24px); transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease); }
+.js [data-words].is-in .w { opacity: 1; transform: none; }
 .js [data-slide] { opacity: 0; transform: translateY(24px); transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease); }
 .js [data-slide].is-in { opacity: 1; transform: none; }
-.js .reveal { opacity: 0; filter: blur(8px); transform: translateY(24px); transition: opacity var(--dur) var(--ease), filter var(--dur) var(--ease), transform var(--dur) var(--ease); }
-.js .reveal.is-in { opacity: 1; filter: none; transform: none; }
+.js .reveal { opacity: 0; transform: translateY(32px); transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease); }
+.js .reveal.is-in { opacity: 1; transform: none; }
 .js .reveal-img { overflow: hidden; }
 .js .reveal-img img { opacity: 0; transform: translateY(40px) scale(1.04); transition: opacity 1.4s var(--ease), transform 1.4s var(--ease); }
 .js .reveal-img.is-in img { opacity: 1; transform: none; }
 
-main { transition: opacity 0.5s var(--ease), filter 0.5s var(--ease), transform 0.5s var(--ease); }
-.is-leaving main { opacity: 0; filter: blur(8px); transform: translateY(-8px); }
+main { transition: opacity 0.5s var(--ease), transform 0.5s var(--ease); }
+.is-leaving main { opacity: 0; transform: translateY(-24px); }
 .js main.page-enter { animation: pageIn var(--dur) var(--ease) both; }
-@keyframes pageIn { from { opacity: 0; filter: blur(8px); } to { opacity: 1; filter: none; } }
+@keyframes pageIn { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
-  .js [data-blur] .w, .js .reveal, .js [data-slide], .js .reveal-img img { filter: none !important; transform: none !important; transition: opacity 0.4s linear !important; }
-  .is-leaving main { filter: none; transform: none; }
+  .js [data-words] .w, .js .reveal, .js [data-slide], .js .reveal-img img { transform: none !important; transition: opacity 0.4s linear !important; }
+  .is-leaving main { transform: none; }
   .tile:hover, .tile:hover .tile__img img, .pkg:hover .pkg__img img, .story-link:hover .story-link__img img { transform: none; }
 }
 

@@ -11,9 +11,9 @@
     btn.innerHTML = `<span class="btn__label" data-text="${text}"><span>${text}</span></span>`;
   });
 
-  /* Blur-in titles: split into words, stagger 70ms */
-  const blurEls = document.querySelectorAll('[data-blur]');
-  blurEls.forEach((el) => {
+  /* Slide-in titles: split into words, stagger 70ms */
+  const wordEls = document.querySelectorAll('[data-words]');
+  wordEls.forEach((el) => {
     let i = Number(el.dataset.delay || 0);
     const walk = (node) => {
       [...node.childNodes].forEach((child) => {
@@ -43,7 +43,7 @@
   if (main && !reduced) main.classList.add('page-enter');
 
   const showOnLoad = () => {
-    document.querySelectorAll('[data-blur], [data-slide]').forEach((el) => {
+    document.querySelectorAll('[data-words], [data-slide]').forEach((el) => {
       if (el.closest('.reveal-on-scroll')) return;
       const d = Number(el.dataset.slideDelay || 0);
       setTimeout(() => el.classList.add('is-in'), d);
@@ -60,7 +60,7 @@
       const idx = Math.max(0, group.indexOf(el));
       setTimeout(() => {
         el.classList.add('is-in');
-        el.querySelectorAll('[data-blur]').forEach((b) => b.classList.add('is-in'));
+        el.querySelectorAll('[data-words]').forEach((b) => b.classList.add('is-in'));
       }, reduced ? 0 : idx * 90);
       io.unobserve(el);
     });
@@ -118,7 +118,7 @@
     ctaTargets.forEach((t) => ctaIO.observe(t));
   }
 
-  /* Page transitions: blur out on internal page links only */
+  /* Page transitions: slide out on internal page links only */
   document.addEventListener('click', (e) => {
     const a = e.target.closest('a');
     if (!a || e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;

@@ -108,8 +108,6 @@ em.serif { font-family: var(--serif); font-style: italic; }
   transition: transform var(--dur) var(--ease);
 }
 .btn:hover .btn__label > span, .btn:hover .btn__label::after { transform: translateY(-100%); }
-.btn__arrow { width: 22px; height: 10px; flex: none; transition: transform var(--dur) var(--ease); }
-.btn:hover .btn__arrow { transform: translateX(5px); }
 
 .btn--ghost { --btn-bg: transparent; --btn-bg-hover: rgba(250, 248, 245, 0.14); --btn-fg: currentColor; border-color: currentColor; }
 .btn--ghost-dark { --btn-bg: transparent; --btn-bg-hover: var(--surface); --btn-fg: var(--ink); border-color: var(--ink); }

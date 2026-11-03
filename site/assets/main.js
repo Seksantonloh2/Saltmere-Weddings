@@ -3,13 +3,12 @@
   const doc = document.documentElement;
   doc.classList.add('js');
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const ARROW = '<svg class="btn__arrow" viewBox="0 0 22 10" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M0 5h21M16.5 0.5L21 5l-4.5 4.5"/></svg>';
 
   /* Buttons: duplicate label for the slide-up hover, thin line arrow */
   document.querySelectorAll('.btn').forEach((btn) => {
     if (btn.querySelector('.btn__label')) return;
     const text = btn.textContent.trim();
-    btn.innerHTML = `<span class="btn__label" data-text="${text}"><span>${text}</span></span>${btn.hasAttribute('data-no-arrow') ? '' : ARROW}`;
+    btn.innerHTML = `<span class="btn__label" data-text="${text}"><span>${text}</span></span>`;
   });
 
   /* Blur-in titles: split into words, stagger 70ms */
@@ -196,7 +195,7 @@
           <a class="btn" href="/enquire/">Plan yours with us</a>
         </footer>`;
       const btn = body.querySelector('.btn');
-      btn.innerHTML = `<span class="btn__label" data-text="Plan yours with us"><span>Plan yours with us</span></span>${ARROW}`;
+      btn.innerHTML = `<span class="btn__label" data-text="Plan yours with us"><span>Plan yours with us</span></span>`;
       dialog.showModal();
       dialog.scrollTop = 0;
       if (location.hash !== `#${key}`) history.replaceState(null, '', `#${key}`);

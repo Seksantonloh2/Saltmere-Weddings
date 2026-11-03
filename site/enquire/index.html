@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Check Your Date | Enquire with Saltmere Weddings</title>
+  <meta name="description" content="Tell us your wedding date, area and guest count. We reply within one business day to let you know if we're free and book a free 30-minute call.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
+      <nav class="nav" aria-label="Main">
+        <a href="/services/">Services</a>
+        <a href="/weddings/">Real Weddings</a>
+        <a href="/about/">About</a>
+      </nav>
+      <a class="wordmark" href="/" aria-label="Saltmere Weddings home"><span class="wordmark__main">SALTMERE</span><span class="wordmark__sub">Weddings</span></a>
+      <a class="btn btn--sm site-header__cta" href="/enquire/">Check your date</a>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/services/">Services</a>
+    <a href="/weddings/">Real Weddings</a>
+    <a href="/about/">About</a>
+    <a href="/enquire/" aria-current="page">Enquire</a>
+    <div class="mobile-menu__meta"><a href="tel:+61448484848">0448 484 848</a><a href="mailto:hello@saltmereweddings.com.au">hello@saltmereweddings.com.au</a></div>
+  </div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow" data-slide>Enquire</p>
+        <h1 class="title-hero" data-blur>Tell us your date.</h1>
+        <p class="sub-hero" data-blur data-delay="3">We’ll reply within one business day to let you know if we’re free and book a 30-minute call.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container enquire-grid">
+        <div class="form-wrap" data-slide data-slide-delay="400">
+          <form class="form" id="enquiry-form" novalidate>
+            <div class="field field--full field--date">
+              <label for="date">Wedding date</label>
+              <div class="row">
+                <input class="input" type="date" id="date" name="date" aria-describedby="date-error">
+                <label class="check"><input type="checkbox" name="date-not-set"> Not set yet</label>
+              </div>
+              <span class="field__error" id="date-error" role="alert"></span>
+            </div>
+            <div class="field field--full">
+              <label for="names">Your names</label>
+              <input class="input" id="names" name="names" autocomplete="name" placeholder="e.g. Hannah & Josh" aria-describedby="names-error">
+              <span class="field__error" id="names-error" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input class="input" type="email" id="email" name="email" autocomplete="email" aria-describedby="email-error">
+              <span class="field__error" id="email-error" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input class="input" type="tel" id="phone" name="phone" autocomplete="tel" aria-describedby="phone-error">
+              <span class="field__error" id="phone-error" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="area">Area</label>
+              <select class="input" id="area" name="area" aria-describedby="area-error">
+                <option value="">Choose an area</option>
+                <option>Brisbane</option>
+                <option>Scenic Rim</option>
+                <option>Gold Coast hinterland</option>
+                <option>Not sure yet</option>
+              </select>
+              <span class="field__error" id="area-error" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="guests">Guest count</label>
+              <select class="input" id="guests" name="guests" aria-describedby="guests-error">
+                <option value="">Choose a range</option>
+                <option>Under 20</option>
+                <option>20–60</option>
+                <option>60–120</option>
+                <option>120+</option>
+              </select>
+              <span class="field__error" id="guests-error" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="package">Package you’re interested in <span class="opt">(optional)</span></label>
+              <select class="input" id="package" name="package">
+                <option value="">Not sure yet</option>
+                <option value="full-planning">Full planning (from $8,500)</option>
+                <option value="partial-planning">Partial planning (from $4,500)</option>
+                <option value="coordination">On-the-day coordination (from $2,200)</option>
+                <option value="styling">Styling &amp; design (from $3,000)</option>
+                <option value="elopement">Elopement (from $1,800)</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="venue">Venue, if booked <span class="opt">(optional)</span></label>
+              <input class="input" id="venue" name="venue">
+            </div>
+            <div class="field field--full">
+              <label for="message">Anything else we should know? <span class="opt">(optional)</span></label>
+              <textarea class="input" id="message" name="message" placeholder="Your vibe, must-haves, or questions for us."></textarea>
+            </div>
+            <div class="form__submit">
+              <button class="btn" type="submit">Send my enquiry</button>
+              <p>We reply within one business day.</p>
+            </div>
+          </form>
+          <div class="form-success" tabindex="-1" role="status">
+            <span class="form-success__dot">Enquiry sent</span>
+            <h2>Thanks! We’ll be in touch within one business day.</h2>
+            <p class="muted">In the meantime, have a look through some <a href="/weddings/">weddings we’ve planned</a>.</p>
+          </div>
+        </div>
+
+        <aside class="side" data-slide data-slide-delay="600">
+          <div class="side__img"><img src="https://images.unsplash.com/photo-1764731080480-58b18e519bd9?auto=format&fit=crop&w=900&h=675&q=75" alt="A minimal wedding invitation suite laid on linen" loading="lazy"></div>
+          <dl class="contact-list">
+            <div><dt>Email</dt><dd><a href="mailto:hello@saltmereweddings.com.au">hello@saltmereweddings.com.au</a></dd></div>
+            <div><dt>Phone</dt><dd><a href="tel:+61448484848">0448 484 848</a></dd></div>
+            <div><dt>Studio</dt><dd>By appointment, Brisbane QLD</dd></div>
+            <div><dt>Hours</dt><dd>Mon–Fri 9am–5pm<br><span class="muted">Sat consultations by appointment</span></dd></div>
+            <div><dt>Instagram</dt><dd><a href="https://instagram.com/saltmereweddings" rel="noopener">@saltmereweddings</a></dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--line" id="faq">
+      <div class="container">
+        <div class="sec-head center reveal-on-scroll">
+          <p class="eyebrow">FAQ</p>
+          <h2 class="title-sec" data-blur>Good questions to ask.</h2>
+        </div>
+        <div class="faq">
+          <details class="reveal"><summary>How far ahead should we book?<span class="plus" aria-hidden="true"></span></summary><div class="faq__a"><p>12 to 18 months for full planning; 3 to 6 months for on-the-day coordination.</p></div></details>
+          <details class="reveal"><summary>Do you travel?<span class="plus" aria-hidden="true"></span></summary><div class="faq__a"><p>Yes, across South East Queensland. Travel outside Brisbane is quoted upfront.</p></div></details>
+          <details class="reveal"><summary>How do payments work?<span class="plus" aria-hidden="true"></span></summary><div class="faq__a"><p>A 30% deposit secures your date; the balance is split into instalments up to four weeks before the wedding.</p></div></details>
+          <details class="reveal"><summary>Can you work with suppliers we’ve already booked?<span class="plus" aria-hidden="true"></span></summary><div class="faq__a"><p>Of course. We’ll contact them and fold them into the plan.</p></div></details>
+          <details class="reveal"><summary>What happens if it rains?<span class="plus" aria-hidden="true"></span></summary><div class="faq__a"><p>Every wedding has a written wet-weather plan, agreed well before the day.</p></div></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="wordmark" href="/" aria-label="Saltmere Weddings home"><span class="wordmark__main">SALTMERE</span><span class="wordmark__sub">Weddings</span></a>
+          <p class="footer-tag">Wedding planning and styling for couples who want a calm lead-up.</p>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="mailto:hello@saltmereweddings.com.au">hello@saltmereweddings.com.au</a></li>
+            <li><a href="tel:+61448484848">0448 484 848</a></li>
+            <li><a href="https://instagram.com/saltmereweddings" rel="noopener">Instagram @saltmereweddings</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Service areas</h3>
+          <ul><li>Brisbane</li><li>Scenic Rim</li><li>Gold Coast hinterland</li><li>South East Queensland</li></ul>
+        </div>
+        <div>
+          <h3>Studio</h3>
+          <ul><li>By appointment, Brisbane QLD</li><li>Mon–Fri 9am–5pm</li><li>ABN 00 000 000 000</li></ul>
+        </div>
+      </div>
+      <div class="footer-base"><span>© 2026 Saltmere Weddings</span><span>Concept project by THINGBESIDE</span></div>
+    </div>
+  </footer>
+
+  <div class="mobile-cta"><a class="btn" href="/enquire/">Check your date</a></div>
+  <script src="/assets/main.js"></script>
+</body>
+</html>

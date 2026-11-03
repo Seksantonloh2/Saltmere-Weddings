@@ -21,7 +21,7 @@
 
   /* Title / subtitle pairs (~4:1) */
   --t-hero: clamp(60px, 8.4vw, 112px);
-  --s-hero: clamp(16px, 2.1vw, 28px);
+  --s-hero: clamp(16px, 2.1vw, 24px);
   --t-sec: clamp(44px, 5.6vw, 76px);
   --s-sec: clamp(16px, 1.4vw, 19px);
   --t-card: clamp(28px, 2.6vw, 36px);

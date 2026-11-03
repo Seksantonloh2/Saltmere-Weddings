@@ -30,7 +30,7 @@ The package buttons link to `/enquire?package=…`, which preselects the package
 ## Type
 - Headings: **Instrument Serif** 400. Body: **Source Sans 3** 400/600. Wordmark: **Switzer** Medium, 0.42em tracking, with *Weddings* in Instrument Serif italic underneath.
 - Title and subtitle pairs (about 4:1):
-  - Hero: 112 / 28 desktop, 60 / 16 mobile
+  - Hero: 112 / 24 desktop, 60 / 16 mobile
   - Section: 76 / 19 desktop, 44 / 16 mobile
   - Card title: 36 desktop, 28 mobile
 - Body: 18px desktop, 17px mobile, line-height 1.6.
